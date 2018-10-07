@@ -1,0 +1,8 @@
+#!/bin/bash
+# My first script
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install teamviewer_12.0.xxxxx_i386.deb
+
+echo "Teamviewer installed!"
