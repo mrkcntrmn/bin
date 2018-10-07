@@ -1,0 +1,8 @@
+#!/bin/bash
+# Github clone script
+
+sudo apt install git
+
+echo "Github Installed!"
+
+git clone https://github.com/mrkcntrmn/bin
