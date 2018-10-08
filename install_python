@@ -1,0 +1,4 @@
+#!/bin/bash
+# Install python2 script
+
+sudo apt install python
