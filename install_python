@@ -1,4 +1,8 @@
 #!/bin/bash
-# Install python2 script
+# Install python2 script and pip
 
 sudo apt install python
+
+sudo apt install python-pip
+
+
