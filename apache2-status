@@ -1,0 +1,4 @@
+#!/bin/bash
+# Apache2 status script
+
+sudo service apache2 status
