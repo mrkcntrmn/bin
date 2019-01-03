@@ -7,4 +7,4 @@ Change permisions after clone
 
 chmod -R 777 /(home)/(mark)/bin
 
-cd to the directory and ./(file-name)
+cd to the /bin directory and ./(file-name)
