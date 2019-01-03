@@ -1,7 +1,7 @@
 # bin
 Linux Scripts Bin 
 
-Execute git_clone script
+Execute git-clone script
 
 Change permisions after clone
 
