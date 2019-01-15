@@ -1,0 +1,10 @@
+#!/bin/bash
+# Install python2 script, pip, pymongo
+
+sudo apt install python
+
+sudo apt install python-pip
+
+pip install pymongo
+
+pip install --upgrade pymongo
