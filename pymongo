@@ -8,3 +8,5 @@ sudo apt install python-pip
 pip install pymongo
 
 pip install --upgrade pymongo
+
+mongo --ssl --host docdb-2019-01-13-20-41-26.cluster-cealhvkvnunf.us-east-2.docdb.amazonaws.com:27017 --sslCAFile rds-combined-ca-bundle.pem --username docuDB --password Physics26
