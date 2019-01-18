@@ -17,6 +17,8 @@ sudo apt-get update
 
 sudo apt-get install -y mongodb-org
 
+wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+
 cd 
  
 mongo --ssl --host docdb-2019-01-13-20-41-26.cluster-cealhvkvnunf.us-east-2.docdb.amazonaws.com:27017 --sslCAFile rds-combined-ca-bundle.pem --username docuDB --password Physics26
