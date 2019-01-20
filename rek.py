@@ -1,31 +1,15 @@
 import boto3
 
-BUCKET = "26lenox"
-KEY = "test.jpg"
+client = boto3.client('rekognition')
 
-def detect_labels(bucket, key, max_labels=10, min_confidence=90, region="us-east-2c"):
-	rekognition = boto3.client("rekognition", region)
-	response = rekognition.detect_labels(
-		Image={
-			"S3Object": {
-				"Bucket": bucket,
-				"Name": key,
-			}
-		},
-		MaxLabels=max_labels,
-		MinConfidence=min_confidence,
-	)
-	return response['Labels']
+response = client.detect_text(
+    Image={
+        'Bytes': b'bytes',
+        'S3Object': {
+            'Bucket': '26lenox',
+            'Name': 'test.jpg',            
+        }
+    }
+)
 
-
-for label in detect_labels(BUCKET, KEY):
-	print "{Name} - {Confidence}%".format(**label)
-
-"""
-	Expected output:
-	People - 99.2436447144%
-	Person - 99.2436447144%
-	Human - 99.2351226807%
-	Clothing - 96.7797698975%
-	Suit - 96.7797698975%
-"""
+print(response)
