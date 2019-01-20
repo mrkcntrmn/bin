@@ -1,7 +1,7 @@
 import boto3
 
 # Let's use Amazon S3
-rek = boto3.resource('rekognition')
+rek = boto3.client('rekognition')
 
 BUCKET = "26lenox"
 KEY = "test.jpg"    
