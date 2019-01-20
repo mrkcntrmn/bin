@@ -11,7 +11,7 @@ if __name__ == "__main__":
     client=boto3.client('rekognition')
 
   
-    response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+    response=client.detect_text(Image={'S3Object':{'Bucket':'26lenox','Name':'test.jpg'}})
                         
     textDetections=response['TextDetections']
     print ('Detected text')
