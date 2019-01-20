@@ -1,17 +1,13 @@
-#Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-#PDX-License-Identifier: MIT-0 (For details, see https://github.com/awsdocs/amazon-rekognition-developer-guide/blob/master/LICENSE-SAMPLECODE.)
-
 import boto3
 
-if __name__ == "__main__":
+# Let's use Amazon S3
+rek = boto3.resource('rekognition')
 
-    bucket='26lenox'
-    photo='test.jpg'
-
-    client=boto3.client('rekognition')
+BUCKET = "26lenox"
+KEY = "test.jpg"    
 
   
-    response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+    response=rek.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
                         
     textDetections=response['TextDetections']
     print ('Detected text')
