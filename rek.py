@@ -7,10 +7,10 @@ BUCKET = "26lenox"
 KEY = "test.jpg"    
 
   
-    response=rek.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+response=rek.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
                         
-    textDetections=response['TextDetections']
-    print ('Detected text')
+textDetections=response['TextDetections']
+print ('Detected text')
     for text in textDetections:
             print ('Detected text:' + text['DetectedText'])
             print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
