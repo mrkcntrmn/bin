@@ -3,8 +3,8 @@ import boto3
 # Let's use Amazon S3
 rek = boto3.client('rekognition')
 
-BUCKET = "26lenox"
-KEY = "test.jpg"    
+bucket = "26lenox"
+photo = "test.jpg"    
 
   
 response=rek.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
