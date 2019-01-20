@@ -1,22 +1,22 @@
 import boto3
 
-# Let's use Amazon S3
-rek = boto3.client('rekognition')
+if __name__ == "__main__":
 
-bucket = "26lenox"
-photo = "test.jpg"    
+    bucket='26lenox'
+    photo='test.jpg'
+
+    client=boto3.client('rekognition')
 
   
-response=rek.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+    response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
                         
-textDetections=response['TextDetections']
-print ('Detected text')
-for text in textDetections:
-    print ('Detected text:' + text['DetectedText'])
-    print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
-    print ('Id: {}'.format(text['Id']))
-    if 'ParentId' in text:
-        print ('Parent Id: {}'.format(text['ParentId']))
-    print ('Type:' + text['Type'])
-    print    
-
+    textDetections=response['TextDetections']
+    print ('Detected text')
+    for text in textDetections:
+            print ('Detected text:' + text['DetectedText'])
+            print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
+            print ('Id: {}'.format(text['Id']))
+            if 'ParentId' in text:
+                print ('Parent Id: {}'.format(text['ParentId']))
+            print ('Type:' + text['Type'])
+            print
