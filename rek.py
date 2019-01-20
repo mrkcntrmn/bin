@@ -1,9 +1,9 @@
 import boto3
 
-BUCKET = "amazon-rekognition"
+BUCKET = "26lenox"
 KEY = "test.jpg"
 
-def detect_labels(bucket, key, max_labels=10, min_confidence=90, region="eu-west-1"):
+def detect_labels(bucket, key, max_labels=10, min_confidence=90, region="us-east-2c"):
 	rekognition = boto3.client("rekognition", region)
 	response = rekognition.detect_labels(
 		Image={
