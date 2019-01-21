@@ -15,6 +15,6 @@ if __name__ == "__main__":
     for text in textDetections:
             print ('Detected text:' + text['DetectedText'])
             print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
-            print ('Geometry: {}'.format(text['BoundingBox']))
+            print ('Geometry: {}'.format(text['Geometry']))
           
             print
