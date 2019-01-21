@@ -20,7 +20,7 @@ if __name__ == "__main__":
     s3 = boto3.resource('s3')
 
     localfile = open('rek.txt', "w")  
-    localfile.write(parse)
+    localfile.write(json.dumps(response))
     # Upload a new file
     data = open('rek.txt', 'rb')
     s3.Bucket('15rek').put_object(Key='rek.txt', Body=data)
