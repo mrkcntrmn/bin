@@ -7,7 +7,7 @@ response = client.detect_text(
     Image={        
         'S3Object': {
             'Bucket': '26lenox',
-            'Name': 'test.jpg'            
+            'Name': 'cert.jpg'            
         }
     }
 )  
