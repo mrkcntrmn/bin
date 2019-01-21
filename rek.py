@@ -24,13 +24,3 @@ if __name__ == "__main__":
     # Upload a new file
     data = open('rek.txt', 'rb')
     s3.Bucket('15rek').put_object(Key='rek.txt', Body=data)
-'''    
-    textDetections=response['TextDetections']
-    print ('Detected text')
-    for text in textDetections:
-            print ('Detected text:' + text['DetectedText'])
-            print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
-            print ('Geometry: {}'.format(text['Geometry']))
-          
-            print
-'''
