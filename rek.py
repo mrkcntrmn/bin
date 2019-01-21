@@ -10,3 +10,4 @@ response = client.detect_text(
         }
     }
 )  
+print(response)
