@@ -1,4 +1,5 @@
 import boto3
+import json
 
 if __name__ == "__main__":
 
@@ -9,7 +10,13 @@ if __name__ == "__main__":
 
   
     response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
-                        
+    
+    # parse x:
+    parse = json.loads(response)
+    
+    print(parse["TextDetections"])
+    
+...    
     textDetections=response['TextDetections']
     print ('Detected text')
     for text in textDetections:
@@ -18,3 +25,4 @@ if __name__ == "__main__":
             print ('Geometry: {}'.format(text['Geometry']))
           
             print
+...
