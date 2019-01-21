@@ -14,7 +14,7 @@ if __name__ == "__main__":
     # parse x:
     parse = json.dumps(response)
     
-    print(parse["TextDetections"])
+    print(parse)
     
 '''    
     textDetections=response['TextDetections']
