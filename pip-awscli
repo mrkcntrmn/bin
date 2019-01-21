@@ -1,1 +1,1 @@
-pip uninstall awscli
+pip install awscli
