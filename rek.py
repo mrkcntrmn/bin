@@ -12,7 +12,7 @@ if __name__ == "__main__":
     response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
     
     # parse x:
-    parse = json.loads(response)
+    parse = json.dumps(response)
     
     print(parse["TextDetections"])
     
