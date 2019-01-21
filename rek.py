@@ -6,8 +6,8 @@ client=boto3.client('rekognition')
 response = client.detect_text(
     Image={        
         'S3Object': {
-            'Bucket': "26lenox",
-            'Name': "test.jpg"            
+            'Bucket': '26lenox',
+            'Name': 'test.jpg'            
         }
     }
 )  
