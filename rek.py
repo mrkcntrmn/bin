@@ -16,6 +16,14 @@ if __name__ == "__main__":
     
     print(parse)
     
+    # Let's use Amazon S3
+    s3 = boto3.resource('s3')
+
+    localfile = open('rek.txt', "w")  
+    localfile.write(parse)
+    # Upload a new file
+    data = open('rek.txt', 'rb')
+    s3.Bucket('15rek').put_object(Key='rek.txt', Body=data)
 '''    
     textDetections=response['TextDetections']
     print ('Detected text')
