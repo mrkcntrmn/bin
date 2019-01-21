@@ -16,7 +16,7 @@ if __name__ == "__main__":
     
     print(parse["TextDetections"])
     
-...    
+'''    
     textDetections=response['TextDetections']
     print ('Detected text')
     for text in textDetections:
@@ -25,4 +25,4 @@ if __name__ == "__main__":
             print ('Geometry: {}'.format(text['Geometry']))
           
             print
-...
+'''
