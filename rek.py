@@ -1,13 +1,22 @@
 import boto3
 
-client=boto3.client('rekognition')
+if __name__ == "__main__":
 
-response = client.detect_text(
-    Image={        
-        'S3Object': {
-            'Bucket': '15rek',
-            'Name': 'Scan.png'            
-        }
-    }
-)  
-print(response)
+    bucket='15rek'
+    photo='Scan.png'
+
+    client=boto3.client('rekognition')
+
+  
+    response=client.detect_text(Image={'S3Object':{'Bucket':bucket,'Name':photo}})
+                        
+    textDetections=response['TextDetections']
+    print ('Detected text')
+    for text in textDetections:
+            print ('Detected text:' + text['DetectedText'])
+            print ('Confidence: ' + "{:.2f}".format(text['Confidence']) + "%")
+            print ('Id: {}'.format(text['Id']))
+            if 'ParentId' in text:
+                print ('Parent Id: {}'.format(text['ParentId']))
+            print ('Type:' + text['Type'])
+            print
