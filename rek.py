@@ -4,7 +4,7 @@ import json
 if __name__ == "__main__":
 
     bucket='15rek'
-    photo='Scan.jpg'
+    photo='Scan1.jpg'
 
     client=boto3.client('rekognition')
 
