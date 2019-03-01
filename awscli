@@ -1,3 +1,6 @@
 pip install awscli
 
 pip install boto3
+
+curl -L https://raw.githubusercontent.com/c9/install/master/install.sh | bash
+wget -O - https://raw.githubusercontent.com/c9/install/master/install.sh | bash
