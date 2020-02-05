@@ -2,9 +2,8 @@
 Created on 2-4-20
 @author: MARK
 '''
-import nba_api
+from nba_api.stats.static import players
 
 
-#This is how you print output using Python version 3.X
-
-print(get_players())
+# Get all players.
+print(players.get_players())
